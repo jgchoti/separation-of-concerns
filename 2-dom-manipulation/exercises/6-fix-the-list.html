@@ -43,9 +43,27 @@
 
         <script id="dom-manipulation-script">
           'use strict';
-          debugger;
 
-          // write me! (... without using cloneNode, that's kind of cheating)
+          const actualDiv = document.getElementById('actual');
+          const lists = document.querySelectorAll('ol');
+
+          lists.forEach((ol) => {
+            const newLists = document.createElement('ul');
+            newLists.innerHTML = ol.innerHTML;
+            ol.parentNode.replaceChild(newLists, ol);
+          });
+          const ulElement = actualDiv.querySelector('ul');
+          const listElement = ulElement.querySelectorAll('li');
+
+          const text = 'solar systems';
+          const secondLi = listElement[1];
+          const thirdLi = listElement[2];
+          secondLi.innerText = text;
+          thirdLi.remove();
+
+          const heading = document.createElement('h1');
+          heading.innerText = 'a list of things';
+          actualDiv.insertBefore(heading, ulElement); // Insert before the first <ol> element
         </script>
       </div>
 

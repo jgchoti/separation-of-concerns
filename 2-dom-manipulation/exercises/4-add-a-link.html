@@ -38,9 +38,15 @@
 
         <script id="dom-manipulation-script">
           'use strict';
-          debugger;
+          const link = document.createElement('a');
+          link.innerText = 'Mr. Traversy does it again!';
+          link.href = 'https://www.youtube.com/watch?v=0ik6X4DJKCc';
+          link.expected = '_blank';
 
-          // write me! (... without using cloneNode, that's kind of cheating)
+          document.getElementById('actual').appendChild(link);
+
+          
+        </script>
         </script>
       </div>
 
