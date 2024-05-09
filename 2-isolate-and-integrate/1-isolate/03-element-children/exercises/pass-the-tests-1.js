@@ -10,6 +10,19 @@ console.log(ulEl.nodeName, ulEl.cloneNode(true));
 
 // --- write some code ---
 
+// use Array.from
+
+// const childrenArray = Array.from(ulEl.children);
+// childrenArray[2].innerHTML = 'Salamander'
+// childrenArray.forEach((child) => {
+//   child.innerHTML = child.innerHTML.toLowerCase().trim();
+// });
+
+// use For Loop
+ulEl.children[2].innerHTML = 'Salamander'
+for (const child of ulEl.children) {
+  child.innerHTML = child.innerHTML.toLowerCase().trim()
+}
 // --- --- --- --- --- ---
 
 console.log(ulEl.nodeName, ulEl.cloneNode(true));

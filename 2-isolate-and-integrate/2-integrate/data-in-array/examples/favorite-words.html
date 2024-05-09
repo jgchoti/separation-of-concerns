@@ -31,11 +31,15 @@
     <script id="handlers">
       'use strict';
 
-      const displayWordsHandler = (wordsToDisplay = words) => {
+      const displayWordsHandler = () => {
         debugger;
-        const allWords = wordsToDisplay.reduce(
+        if (!Array.isArray(words)) {
+        alert(`Add your favorite words!`);
+        return;
+    }
+        const allWords = words.reduce(
           (acc, next) => `${acc}\n${next}`,
-          `your favorite words:`,
+          `your favorite words:`
         );
         alert(allWords);
       };

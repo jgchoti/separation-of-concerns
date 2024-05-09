@@ -20,6 +20,20 @@ console.log(divEl.nodeName, divEl.cloneNode(true));
 // --- write some code ---
 //  you will need to access and update each <td> element
 
+const expected = [['a', 'b'], ['c', 'd']];
+const tBodyEl = divEl.children[0].children[0]
+
+
+for (let i = 0; i < tBodyEl.childElementCount; i++) {
+  const trEl = tBodyEl.children[i];
+  for (let j = 0; j < trEl.childElementCount; j++) {
+    const tdEl = trEl.children[j];
+    tdEl.innerHTML = expected[i][j]
+  }
+}
+
+console.log(tBodyEl)
+
 // --- --- --- --- --- ---
 
 console.log(divEl.nodeName, divEl.cloneNode(true));

@@ -10,6 +10,15 @@ ulEl.innerHTML = `
 console.log(ulEl.nodeName + ' (before)', ulEl.cloneNode(true));
 
 // --- write some code ---
+const expectedLists = ['toad', 'frog', 'salamander']
+const pEl = ulEl.querySelector('p')
+ulEl.removeChild(pEl)
+
+let index = 0;
+for (const child of ulEl.children) {
+    child.innerHTML = expectedLists[index];
+    index++;
+  } 
 
 // --- --- --- --- --- ---
 

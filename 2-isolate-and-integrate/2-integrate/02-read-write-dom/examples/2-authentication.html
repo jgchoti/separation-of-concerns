@@ -42,15 +42,14 @@
       <button id="log-out">log out</button>
     </main>
 
-    <script id="data" type="module">
+    <script id="data">
       let loggedIn = false;
       let currentUser = undefined;
     </script>
 
-    <script id="handlers" type="module">
-      const logInHandler = () => {
+    <script id="handlers">
+      const logInHandler = (event) => {
         debugger;
-
         const outputEl = document.getElementById('output');
         if (loggedIn) {
           outputEl.className = 'auth-error';
@@ -129,7 +128,7 @@
       };
     </script>
 
-    <script id="listeners" type="module">
+    <script id="listeners">
       document.getElementById('log-in').addEventListener('click', logInHandler);
 
       document

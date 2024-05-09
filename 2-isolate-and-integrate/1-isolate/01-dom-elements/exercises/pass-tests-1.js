@@ -1,9 +1,13 @@
 'use strict';
 
+const inputEl = document.createElement('input')
+inputEl.className = 'auth-field'
+inputEl.placeholder = 'enter your username'
+
 // the assertions are correct!  write code above to pass them
-console.assert(element.nodeName === 'INPUT', 'Test 1: nodeName');
+console.assert(inputEl.nodeName === 'INPUT', 'Test 1: nodeName');
 console.assert(
-  element.placeholder === 'enter your username',
+  inputEl.placeholder === 'enter your username',
   'Test 2: placeholder',
 );
-console.assert(element.className === 'auth-field', 'Test 3: className');
+console.assert(inputEl.className === 'auth-field', 'Test 3: className');

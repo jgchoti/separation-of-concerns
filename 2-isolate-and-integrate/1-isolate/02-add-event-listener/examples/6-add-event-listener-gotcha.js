@@ -29,8 +29,8 @@ const greetingHandler = () => {
 // add a 'click' event listener to the button
 //  oops!  greetingHandler was called on this line!
 //  debugger will jump from here to greetingHandler
-buttonEl.addEventListener('click', greetingHandler());
-
+buttonEl.addEventListener('click', greetingHandler);
+// ! wrong becase shouldn't call your handler when you add an event listenerbuttonEl.addEventListener('click', greetingHandler());
 // debugger will not jump to the handler
 //  it will continue to the next line
 const clickEvent1 = new Event('click');

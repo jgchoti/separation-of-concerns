@@ -20,7 +20,7 @@ try {
 }
 
 const pEl = document.createElement('P');
-console.log(pEl.nodeName, pEl); // DIV
+console.log(pEl.nodeName, pEl); // P
 
 const buttonEl = document.createElement('bUTTOn');
 console.log(buttonEl.nodeName, buttonEl); // BUTTON

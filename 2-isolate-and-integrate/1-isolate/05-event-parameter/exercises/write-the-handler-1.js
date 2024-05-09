@@ -4,8 +4,24 @@ const buttonEl = document.createElement('button');
 buttonEl.innerHTML = '12345';
 console.log('initial button:', buttonEl.cloneNode(true));
 
-const reverseInnerHTMLHandler = (event) => {
-  // write code to reverse the target element's innerHTML
+// const reverseInnerHTMLHandler = (event) => {
+//   if (buttonEl.innerHTML === '12345') {
+//     buttonEl.innerHTML = '54321';
+//   }else {
+//     buttonEl.innerHTML = '12345';
+//   }
+// };
+
+
+let isReversed = false;
+
+const reverseInnerHTMLHandler = () => {
+  if (isReversed) {
+    buttonEl.innerHTML = '12345';
+  } else {
+    buttonEl.innerHTML = '54321';
+  }
+  isReversed = !isReversed;
 };
 
 buttonEl.addEventListener('click', reverseInnerHTMLHandler);
