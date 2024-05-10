@@ -1,6 +1,9 @@
 .hidden {
   color: white;
 }
+.revealed {
+  color: black;
+}
 
 .framed {
   border: solid black 1px;
