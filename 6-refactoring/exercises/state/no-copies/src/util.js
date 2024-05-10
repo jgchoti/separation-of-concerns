@@ -1,4 +1,6 @@
 /**
  *
  */
-export const saveNoCopies = () => {};
+export const saveNoCopies = (arr) => {
+    return `saved words: ${arr.join(', ')}`;
+};

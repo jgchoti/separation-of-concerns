@@ -1,4 +1,4 @@
-import { search } from './utils.js';
+import { search } from './util.js';
 
 describe('search: searches an array of strings and returns formatted results', () => {
   describe('search: correctly finds and formats search results', () => {

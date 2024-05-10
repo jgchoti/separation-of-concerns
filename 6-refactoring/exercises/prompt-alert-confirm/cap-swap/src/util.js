@@ -1,4 +1,6 @@
 /**
  *
  */
-export const capSwap = () => {};
+export const capSwap = (input) => {
+    return input.toUpperCase()
+};

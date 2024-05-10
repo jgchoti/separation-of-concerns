@@ -4,8 +4,9 @@ const actual = (color, rect) => {
   const canvasEl = document.createElement('canvas');
   const ctx = canvasEl.getContext('2d');
 
-  ctx.fillStyle = _;
-  ctx.fillRect(_);
+  const [x, y, width, height] = rect;
 
-  return _;
+  ctx.fillStyle = color;
+  ctx.fillRect(x, y, width, height);
+  return canvasEl;
 };
