@@ -1,0 +1,26 @@
+select {
+  margin: 0 4px;
+}
+.output {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: monospace;
+  font-size: 2em;
+}
+
+.inputs {
+  text-align: center;
+}
+
+.button {
+  margin-top: 1%;
+}
+
+.light-font {
+  color: white;
+}
+.dark-font {
+  color: black;
+}
