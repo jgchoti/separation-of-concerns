@@ -1,15 +1,15 @@
 /**
  * ...
  */
-export const board = (x = 2, y = 2) => {
-  // create array with shuffled pairs of numbers
-  const maxNumber = Math.ceil((x * y) / 2);
-  const numbers = [...Array(maxNumber).keys()].flatMap((index) => [
-    index,
-    index,
-  ]);
-  // https://javascript.info/task/shuffle
-  const shuffledNumbers = [...numbers.sort(() => Math.random() - 0.5)];
+import { shuffledNumbers } from '../logic/shuffled-numbers.js'
+
+export const board = (x = 4, y = 4) => {
+  const container = document.getElementById('user-interface')
+  container.classList.add('centered')
+  const divEl = document.createElement('div')
+  divEl.id = 'board-container'
+
+  const arrayOfNumbers = shuffledNumbers(x, y)
 
   // create a table with the random numbers
   const tableEl = document.createElement('table');
@@ -21,12 +21,13 @@ export const board = (x = 2, y = 2) => {
       const cellEl = document.createElement('td');
       cellEl.dataset.selected = 'no';
       cellEl.className = 'hidden';
-      cellEl.innerHTML = shuffledNumbers.pop();
+      cellEl.innerHTML = arrayOfNumbers.pop();
 
       rowEl.appendChild(cellEl);
     }
     tableEl.appendChild(rowEl);
   }
-
-  return tableEl;
+  divEl.appendChild(tableEl)
+  container.appendChild(divEl)
+  return divEl;
 };

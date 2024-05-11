@@ -1,0 +1,21 @@
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+td {
+  border: 1px solid black;
+  height: 5em;
+  width: 5em;
+}
+
+.hidden {
+  color: white;
+}
+
+.visible {
+  color: black;
+}
