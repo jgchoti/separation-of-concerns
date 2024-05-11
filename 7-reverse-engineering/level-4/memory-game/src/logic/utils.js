@@ -10,3 +10,6 @@ export const revealNum = (target, isRevealed) => {
         target.classList.remove(visibleClass)
     }
 }
+
+
+

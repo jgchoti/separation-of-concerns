@@ -1,5 +1,5 @@
 import { changeBackground } from '../logic/utils.js';
-import { defaultColor } from '../components/data.js'
+import { defaultColor } from '../../data.js'
 
 export const getNewColorHandler = (event) => {
     const color = event.target.value;
