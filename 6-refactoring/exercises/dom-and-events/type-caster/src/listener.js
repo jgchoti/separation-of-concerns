@@ -1,3 +1,6 @@
 import { castTheValue } from './handler.js';
-debugger
-document.getElementById('user-action').addEventListener("click", castTheValue)
+
+export const eventlistener = () => {
+    document.getElementById('user-action').addEventListener("click", castTheValue)
+    document.querySelector('select').addEventListener('change', castTheValue)
+}

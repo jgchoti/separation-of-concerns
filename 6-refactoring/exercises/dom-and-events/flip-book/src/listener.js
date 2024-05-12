@@ -1,3 +1,4 @@
 import { reverseAndUpperHandler } from './handler.js';
-document.getElementById('input').addEventListener('keyup', reverseAndUpperHandler);
-
+export const eventListener = () => {
+    document.getElementById('input').addEventListener('keyup', reverseAndUpperHandler);
+}

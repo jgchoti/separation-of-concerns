@@ -1,9 +1,11 @@
 import { formatCoordinates } from './util.js';
+import { state } from '../data/state.js';
+import { outputDisplay } from './output-display.js';
 
 export const showMouseCoordinates = (event) => {
-    const text = document.getElementById('mouse-position');
-    const xValue = event.movementX;
-    const yValue = event.movementY;
-    let result = formatCoordinates(xValue, yValue); // Assuming formatCoordinates is defined elsewhere
-    text.innerHTML = result;
+    state.xValue = event.pageX;
+    state.yValue = event.pageY;
+    let result = formatCoordinates(state.xValue, state.yValue);
+    console.log(result)
+    outputDisplay(result)
 };

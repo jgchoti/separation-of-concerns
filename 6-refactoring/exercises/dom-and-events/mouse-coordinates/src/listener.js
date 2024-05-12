@@ -1,3 +1,3 @@
 import { showMouseCoordinates } from './handler.js';
 
-document.getElementById('user-interface').addEventListener('mousemove', showMouseCoordinates)
+export const eventlistener = () => { document.getElementById('user-interface').addEventListener('mousemove', showMouseCoordinates) }
